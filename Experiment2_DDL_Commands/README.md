@@ -1,4 +1,4 @@
-# Experiment 2: DDL Commands
+<img width="1254" height="405" alt="image" src="https://github.com/user-attachments/assets/8da27ed6-3b56-4dbf-ad73-2ba384a50d63" /># Experiment 2: DDL Commands
 
 ## AIM
 To study and implement DDL commands and different types of constraints.
@@ -105,123 +105,177 @@ CREATE TABLE Table_Name (
 
 **Question 1**
 --
--- Paste Question 1 here
+<img width="1118" height="441" alt="image" src="https://github.com/user-attachments/assets/fa8e4198-0339-4926-aae1-5a891079eca0" />
+
 
 ```sql
--- Paste your SQL code below for Question 1
+INSERT INTO Products (Name, Category, Price, Stock)
+VALUES
+('Smartphone', 'Electronics', 800, 150),
+('Headphones', 'Accessories', 200, 300);
 ```
 
 **Output:**
 
-![Output1](output.png)
+<img width="1259" height="457" alt="image" src="https://github.com/user-attachments/assets/f326bd13-7446-4972-886c-310238267c4f" />
+
 
 **Question 2**
 ---
--- Paste Question 2 here
+<img width="976" height="436" alt="image" src="https://github.com/user-attachments/assets/6925f6ad-3001-4725-8b59-b0f2a99f4cd6" />
+
 
 ```sql
--- Paste your SQL code below for Question 2
+INSERT INTO Customers (CustomerID,Name,Address,City,ZipCode) VALUES
+(302,"Laura Croft","456 Elm St","Seattle",98101),
+(303,"Bruce Wayne","789 Oak St","Gotham",10001);
 ```
 
 **Output:**
 
-![Output2](output.png)
+<img width="1212" height="510" alt="image" src="https://github.com/user-attachments/assets/3a0138d4-707b-45a8-9701-10833b643e9b" />
+
 
 **Question 3**
 ---
--- Paste Question 3 here
+<img width="1200" height="463" alt="image" src="https://github.com/user-attachments/assets/68fa0ada-c267-41d9-9b1c-49792b9c507c" />
+
 
 ```sql
--- Paste your SQL code below for Question 3
+CREATE TABLE Bonuses (
+    BonusID INTEGER PRIMARY KEY,
+    EmployeeID INTEGER,
+    BonusAmount REAL CHECK(BonusAmount > 0),
+    BonusDate DATE,
+    Reason TEXT NOT NULL,
+    FOREIGN KEY(EmployeeID) REFERENCES Employees(EmployeeID)
+);
 ```
 
 **Output:**
 
-![Output3](output.png)
+<img width="1215" height="414" alt="image" src="https://github.com/user-attachments/assets/a2ddec35-e865-45ff-a59f-066b70de788e" />
 
 **Question 4**
 ---
--- Paste Question 4 here
+<img width="1214" height="453" alt="image" src="https://github.com/user-attachments/assets/0e7ca2d6-f19e-4f39-b67a-ff90cb9eb25a" />
+
 
 ```sql
--- Paste your SQL code below for Question 4
+CREATE TABLE Products (
+    ProductID INTEGER PRIMARY KEY,
+    ProductName TEXT UNIQUE NOT NULL,
+    Price REAL CHECK(Price > 0),
+    StockQuantity INTEGER CHECK(StockQuantity >= 0)
+);
 ```
 
 **Output:**
 
-![Output4](output.png)
+<img width="1198" height="406" alt="image" src="https://github.com/user-attachments/assets/223f5f22-29b4-43c5-8bcd-4fa5eb92fd9e" />
 
 **Question 5**
 ---
--- Paste Question 5 here
+
+<img width="925" height="403" alt="image" src="https://github.com/user-attachments/assets/d64956a3-79b8-46dc-9883-5ff2d51d117a" />
 
 ```sql
--- Paste your SQL code below for Question 5
+CREATE TABLE Products (
+    ProductID INTEGER PRIMARY KEY,
+    ProductName TEXT NOT NULL,
+    Price REAL CHECK(Price > 0),
+    Stock INTEGER CHECK(Stock >= 0)
+);
 ```
 
 **Output:**
 
-![Output5](output.png)
+<img width="1180" height="402" alt="image" src="https://github.com/user-attachments/assets/d957def1-ede5-48f2-a30e-2f33634d6200" />
+
 
 **Question 6**
 ---
--- Paste Question 6 here
+<img width="1220" height="419" alt="image" src="https://github.com/user-attachments/assets/08531b56-0acc-4ea0-b7fe-4b9a37ed8fa3" />
 
 ```sql
--- Paste your SQL code below for Question 6
+CREATE TABLE Invoices 
+(
+    InvoiceID INTEGER PRIMARY KEY,
+    InvoiceDate DATE,
+    DueDate Date CHECK (DueDate > InvoiceDate),
+    Amount REAL CHECK(Amount > 0)
+);
 ```
 
 **Output:**
 
-![Output6](output.png)
+<img width="1254" height="405" alt="image" src="https://github.com/user-attachments/assets/e81fcba0-104d-4883-880d-ec6f32d84aa0" />
 
 **Question 7**
 ---
--- Paste Question 7 here
+<img width="1178" height="465" alt="image" src="https://github.com/user-attachments/assets/a061160e-60af-4aea-a8f4-2ea792364430" />
 
 ```sql
--- Paste your SQL code below for Question 7
+CREATE TABLE Locations 
+(
+    LocationID INTEGER,
+    LocationName TEXT,
+    Address TEXT
+);
 ```
 
 **Output:**
 
-![Output7](output.png)
+<img width="1203" height="510" alt="image" src="https://github.com/user-attachments/assets/20e56195-c191-4859-bed6-e2c7d1ba90fa" />
 
 **Question 8**
 ---
--- Paste Question 8 here
+<img width="1146" height="399" alt="image" src="https://github.com/user-attachments/assets/9923a28c-b4bc-41f4-b4fe-2341b7b6fea6" />
+
 
 ```sql
--- Paste your SQL code below for Question 8
+INSERT INTO Books (ISBN, Title, Author, Publisher, YearPublished)
+SELECT ISBN, Title, Author, Publisher, YearPublished
+FROM Out_of_print_books;
 ```
 
 **Output:**
 
-![Output8](output.png)
+<img width="1170" height="420" alt="image" src="https://github.com/user-attachments/assets/93934a17-e612-423d-bf56-d88d9dbe25f1" />
 
 **Question 9**
 ---
--- Paste Question 9 here
+<img width="1190" height="440" alt="image" src="https://github.com/user-attachments/assets/e7407cef-717d-4483-8ae8-4f7d7d60e68f" />
+
 
 ```sql
--- Paste your SQL code below for Question 9
+ALTER TABLE Student_details
+ADD COLUMN email TEXT NOT NULL DEFAULT 'Invalid';
 ```
 
 **Output:**
+<img width="1218" height="368" alt="image" src="https://github.com/user-attachments/assets/fff54f47-f576-4ab4-a62b-54c1161e85ad" />
 
-![Output9](output.png)
 
 **Question 10**
 ---
--- Paste Question 10 here
+<img width="1192" height="547" alt="image" src="https://github.com/user-attachments/assets/e4edebe6-d2d6-4dfb-a68f-fc862edca2c3" />
+
 
 ```sql
--- Paste your SQL code below for Question 10
+ALTER TABLE Companies
+RENAME COLUMN name TO first_name;
+
+ALTER TABLE Companies
+ADD COLUMN mobilenumber number;
+
+ALTER TABLE Companies
+ADD COLUMN DOB Date;
 ```
 
 **Output:**
 
-![Output10](output.png)
+<img width="1181" height="516" alt="image" src="https://github.com/user-attachments/assets/221a49f8-1044-4651-af58-186afc7966e4" />
 
 
 ## RESULT
