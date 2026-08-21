@@ -1,38 +1,6 @@
-Skip to content
-prahathieswaransstudent-maker
-19CS404-DBMS-Lab-Manual
-Repository navigation
-Code
-Pull requests
-Agents
-Actions
-Projects
-Security and quality
-Insights
-Comparing changes
-Choose two branches to see what’s changed or to start a new pull request. If you need to, you can also  or learn more about diff comparisons.
- 
-...
- 
- Able to merge. These branches can be automatically merged.
-Discuss and review the changes in this comparison with others. Learn about pull requests
- 1 commit
- 1 file changed
- 1 contributor
-Commits on Aug 21, 2026
-Add SQL DML command examples to README 
 
-@prahathieswarans-ship-it
-prahathieswarans-ship-it authored 1 minute ago
- Showing  with 64 additions and 30 deletions.
-  94 changes: 64 additions & 30 deletions94  
-Experiment3_DML_Commands/README.md
-Original file line number	Diff line number	Diff line change
-@@ -47,123 +47,157 @@ SELECT column1, column2 FROM table_name WHERE condition;
-```
 **Question 1**
 --
--- Paste Question 1 here
 <img width="1195" height="434" alt="image" src="https://github.com/user-attachments/assets/fe93d080-1dcf-450d-9926-4d40589cc23d" />
 
 
